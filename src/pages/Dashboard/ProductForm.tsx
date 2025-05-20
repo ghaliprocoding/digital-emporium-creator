@@ -114,7 +114,7 @@ const ProductForm: React.FC = () => {
     }
     
     if (values.productFile) {
-      formData.append('productFile', values.productFile);
+      formData.append('file', values.productFile);
     }
     
     mutation.mutate(formData);

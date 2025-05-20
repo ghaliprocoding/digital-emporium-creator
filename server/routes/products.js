@@ -114,8 +114,8 @@ router.post('/', protect, upload.fields([
       title: req.body.title,
       description: req.body.description,
       price: req.body.price,
-      imageUrl,
-      fileUrl,
+      imageUrl: imageUrl || '/placeholder.svg',
+      fileUrl: fileUrl || '',
       creator: req.user.id
     });
 
