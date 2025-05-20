@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 // Base URL for our API
-const API_URL = 'https://digital-marketplace-api.onrender.com/api';
+const API_URL = 'http://localhost:5000/api';
 
 // Create axios instance with defaults
 const api = axios.create({
@@ -71,7 +71,7 @@ export const productAPI = {
   },
 
   getUserProducts: async () => {
-    const response = await api.get('/products/user');
+    const response = await api.get('/products/user/me');
     return response.data;
   },
 
